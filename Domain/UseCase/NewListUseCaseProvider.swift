@@ -71,12 +71,12 @@ public struct NewListUseCaseProvider<R, CloudService: ServiceType, CacheService:
                     if case let Result.success(type) = result {
                         
                         if page <= 1 {
-//                            self._cache.removeAll()
+                            self._cache.removeAll()
                         }
                         
                         if _insertToCache{
                             if type.data.count > 0 {
-//                                self._cache.putList(models: type.data)
+                                self._cache.putList(models: type.data)
                             }
                         }
                         
