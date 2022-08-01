@@ -43,7 +43,7 @@ public struct NewListUseCaseProvider<R, CloudService: ServiceType, CacheService:
         let forceReload: Bool
         let page: Int
         
-        if let request = request as? ListRequestType {
+        if let request = request as? NewListRequestType {
             forceReload = request.forceReload
             page = request.page
         } else {
